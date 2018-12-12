@@ -69,7 +69,7 @@
             async save(){
                 this.saving = true;
                 try {
-                    let resp = await axios.post("http://localhost:3000/livro", this.cbook);
+                    //let resp = await axios.post("http://localhost:3000/livro", this.cbook);
                     this.showSnackBar("Salvo com sucesso");
                 } catch (error) {
                     this.showSnackBar("Não Foi Possível Cadastrar");
