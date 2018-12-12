@@ -16,7 +16,7 @@
                     <td>{{ book.item.livro }}</td>
                     <td>{{ book.item.paginas }}</td>
                     <td class="justify-center layout px-0">
-                        <v-btn icon class="mx-0" @click="remove(book.item)">
+                        <v-btn icon class="mx-0" @click="remove(cbook.item)">
                             <v-icon color="pink">delete</v-icon>
                         </v-btn>
                     </td>
@@ -68,17 +68,17 @@
             },
             async findAll(){
                 try {
-                   // let resp = await axios.get(this.$store.state.apiLink + "/livro");
-                    //this.cbook = resp.data;
+                    let resp = await axios.get(this.$store.state.apiLink + "/livro");
+                    this.cbook = resp.data;
                 } catch (error) {
-                     this.showSnackBar("Falha ao carregar livros.");
+                    alert("Falha ao carregar livros.");
                     console.log("Erro ao carregar livros: " + error);
                 }
             },
             async remove(_id){
                 try {
                     if(confirm("Deseja realmente remover este livro?")){
-                        //await axios.delete("http://localhost:3000/livro", { data: {_id: _id} });
+                        await axios.delete("http://localhost:3000/livro", { data: {_id: _id} });
                         this.showSnackBar("Excluido");
                         this.findAll();
                     }
