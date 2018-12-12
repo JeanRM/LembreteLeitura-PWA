@@ -7,12 +7,10 @@
               <v-btn
                 v-show="!hidden"
                 color="pink"
-                dark
                 absolute
-                bottom="true"
+                bottom
                 right
                 fab
-                m
               >
                 <v-icon>add</v-icon>
               </v-btn>

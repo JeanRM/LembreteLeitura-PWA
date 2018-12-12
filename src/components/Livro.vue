@@ -78,7 +78,7 @@
             async remove(_id){
                 try {
                     if(confirm("Deseja realmente remover este livro?")){
-                        await axios.delete("http://localhost:3000/livro", { data: {_id: _id} });
+                        await axios.delete(this.$store.state.apiLink + "/livro", { data: {_id: _id} });
                         this.showSnackBar("Excluido");
                         this.findAll();
                     }
