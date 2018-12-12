@@ -8,7 +8,7 @@
                 v-show="!hidden"
                 color="pink"
                 absolute
-                bottom
+                top
                 right
                 fab
               >
