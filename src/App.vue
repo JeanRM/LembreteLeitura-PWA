@@ -65,7 +65,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Lembrete de Leitura de Livros'
+      title: 'Lembrete de Leitura'
     }
   },
   name: 'App'
