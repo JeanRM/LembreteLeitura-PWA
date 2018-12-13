@@ -1,6 +1,11 @@
 <template>
-  <v-layout>
-     <v-btn dark color="pink" absolute bottom right fab class="mb-4"  @click="dialog = true">
+  <v-container>
+    <v-layout>
+      <v-flex md12 offset-md xs12>
+        <h1> Oii meu amorzilis da minha vidazilis *-*</h1>    
+      </v-flex>
+    
+     <v-btn dark color="green" absolute bottom right fab class="mb-4"  @click="dialog = true">
         <v-icon>add</v-icon>
     </v-btn>   
   <v-layout row justify-center>
@@ -32,8 +37,8 @@
               </v-flex>
             </v-layout>
           </v-container>
-          <small>*indicates required field</small>
         </v-card-text>
+        
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
@@ -43,6 +48,8 @@
     </v-dialog>
   </v-layout>
   </v-layout>
+  </v-container>
+  
 </template>
 
 <script>

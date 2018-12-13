@@ -9,7 +9,7 @@
       fixed
       app
     >
-      <v-list>
+      <v-list color="green">
         <v-list-tile
           v-for="(item, i) in items"
           :key="i"
@@ -24,12 +24,12 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="light-blue" dark
+    <v-toolbar color="green" dark
       app
       :clipped-left="clipped"
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <h1><v-toolbar-title v-text="title"></v-toolbar-title></h1>
+      <h1><v-toolbar-title color="green" font-family="Open Sans" v-text="title"></v-toolbar-title></h1>
     </v-toolbar>
     <v-content>
       <router-view/>
@@ -55,11 +55,6 @@ export default {
           icon: "book",
           title: 'Livros',
           url: "/livro"
-        },
-        {
-          icon: "book",
-          title: 'Cadastro',
-          url: "/cadastrar"
         }
       ],
       miniVariant: false,
