@@ -24,7 +24,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="teal accent-3" dark
+    <v-toolbar color="green" dark
       app
       :clipped-left="clipped"
     >

@@ -1,8 +1,7 @@
 <template>
   <v-container>
     <v-layout>
-      <v-flex md12 offset-md xs12>
-        <h1> Oii meu amorzilis da minha vidazilis *-*</h1>    
+      <v-flex md12 offset-md xs12> 
       </v-flex>
     
      <v-btn dark color="green" absolute bottom right fab class="mb-4"  @click="dialog = true">
