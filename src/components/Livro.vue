@@ -1,11 +1,10 @@
 <template>
-
   <v-container>
       <v-layout row>
-
          <v-flex md12 offset-md xs12>
-            <h1>Livros Cadastrados</h1>
-
+            <v-layout align center>
+                <h1>Livros Cadastrados</h1>
+            <v-layout>
             <v-data-table
                 :headers="headers"
                 :items="cbook"
