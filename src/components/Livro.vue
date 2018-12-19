@@ -2,18 +2,18 @@
     <v-container>
         <v-layout row>
             <v-btn dark color="green" absolute bottom right fab class="mb-4"  @click="dialog = true">
-                <v-icon>add</v-icon>
+                <v-icon >add</v-icon>
             </v-btn> 
             
             <v-flex md12 offset-md xs12>
-                <h1>Livros Cadastrados</h1>
+                <h1 class="green--text Arial--text mt-4 mb-4">Livros Cadastrados</h1>
                 <v-data-table :headers="headers" :items="cbook" class="elevation-1">
                     <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
                     
                     <template slot="items" slot-scope="book">
-                        <td>{{ book.item.livro }}</td>
-                        <td>{{ book.item.paginas }}</td>
-                        <td class="justify-center layout px-0">
+                        <td class="text-xs-left">{{ book.item.livro }}</td>
+                        <td class="text-xs-left">{{ book.item.paginas }}</td>
+                        <td class="text-xs-left">
                             <v-btn icon class="mx-0" @click="remove(book.item)">
                                 <v-icon color="pink">delete</v-icon>
                             </v-btn>
@@ -35,8 +35,8 @@
                                 <v-layout wrap>
                                     <v-flex xs12>
                                         <v-form>
-                                            <v-text-field label="livro" required v-model="cbooks.livro"/>
-                                            <v-text-field label="paginas" required v-model="cbooks.paginas"/>
+                                            <v-text-field required label="livro"  v-model="cbooks.livro"/>
+                                            <v-text-field required type="number" label="paginas"  v-model="cbooks.paginas"/>
                                         </v-form>
                                     </v-flex>
                                 </v-layout>
@@ -61,6 +61,7 @@
 </template>
 
 <script>
+
     import axios from 'axios';
 
     export default{    
@@ -70,6 +71,7 @@
                 saving: false,
                 cbooks: {},
                 snackbar: { show: false, text: "" },
+                
                 headers: [
                     {
                         text: 'Livro',
@@ -78,9 +80,10 @@
                         value: 'livro'
                     },
                     { text: 'Paginas', value: 'paginas' },
-                    { text: 'Ações', sortable: false}
+                    { text: 'Ação', sortable: false}
                 ],
                 cbook: []
+                
             }
         },
         
@@ -121,6 +124,8 @@
                     this.showSnackBar("Não Foi Possível Excluir");
                 }
             },
+            
+           
         },
         mounted(){
             this.findAll();

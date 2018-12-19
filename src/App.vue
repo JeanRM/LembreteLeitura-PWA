@@ -29,7 +29,7 @@
       :clipped-left="clipped"
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <h1><v-toolbar-title color="green" font-family="Open Sans" v-text="title"></v-toolbar-title></h1>
+      <h1><v-toolbar-title class="white--text" font-family="Open Sans" v-text="title"></v-toolbar-title></h1>
     </v-toolbar>
     <v-content>
       <router-view/>

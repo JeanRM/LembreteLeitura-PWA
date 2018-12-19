@@ -17,7 +17,7 @@ Vue.config.productionTip = false
 // configurando  Vuex
 const store = new Vuex.Store({
   state: {
-    apiLink: "https://api-lembrete.herokuapp.com"
+    apiLink: "http://localhost:3000"
   }
 })
 
